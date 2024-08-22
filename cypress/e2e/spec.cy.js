@@ -5,11 +5,11 @@ describe('Dice Job Search', () => {
 
       cy.get('input[placeholder="Please enter your email"]', { timeout: 30000 })
         .clear()
-        .type('innovapathipsri@gmail.com{enter}');
+        .type(`${Cypress.env('email')}{enter}`);
 
       cy.get('input[placeholder="Enter Password"]', { timeout: 30000 })
         .clear()
-        .type('Innovapath@71{enter}');
+        .type(`${Cypress.env('password')}{enter}`);
 
       cy.url({ timeout: 30000 }).should('include', '/home/home-feed');
     });

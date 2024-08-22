@@ -8,18 +8,6 @@ module.exports = defineConfig({
   },
 });
 
-
-module.exports = {
-  e2e: {
-    baseUrl: 'https://www.dice.com',
-    env: {
-      email: 'enter email',
-      password: 'enter password',
-    },
-  },
-};
-
-
 // cypress.config.js
 module.exports = {
   e2e: {
@@ -27,8 +15,10 @@ module.exports = {
       // implement node event listeners here
     },
     env: {
-      searchTerm: 'Ml engineer',
-      location: 'united states'
-    },
-  },
-};
+      email: 'enter email',
+      password: 'enter password',
+      searchTerm: 'ml engineer', 
+      location: 'united states'    
+    }
+  }
+}
